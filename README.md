@@ -1,24 +1,24 @@
-# Pre-entrega Automation Testing – saucedemo.com
+# Pre-entrega Automation Testing
 
 ## Propósito
 Automatizar con Selenium y Pytest tres flujos básicos de
-[saucedemo.com](https://www.saucedemo.com): login, verificación del catálogo
+(https://www.saucedemo.com): login, verificación del catálogo
 de productos y agregado de un producto al carrito.
 
 ## Tecnologías utilizadas
 - Python 3
 - Selenium WebDriver (Chrome)
-- Pytest y pytest-html (reporte)
+- Pytest y pytest-html 
 - Git y GitHub
 
 ## Estructura del proyecto
-```
+
 tests/test_saucedemo.py   -> casos de prueba
 utils/helpers.py          -> funciones auxiliares (login, esperas, capturas, log)
 conftest.py               -> fixture que abre y cierra el navegador
 reports/                  -> reporte HTML, log y capturas de pantalla
 requirements.txt          -> dependencias
-```
+
 
 ## Casos de prueba
 1. **test_login_exitoso**: inicia sesión con `standard_user` y valida la redirección a `/inventory.html` y los textos "Products" y "Swag Labs".
@@ -35,16 +35,15 @@ Cada test abre su propio navegador, por lo que son independientes entre sí.
 
 ## Instalación de dependencias
 Requiere tener Python y Google Chrome instalados.
-```bash
+
 python -m venv venv
-venv\Scripts\activate        # en Linux/Mac: source venv/bin/activate
+venv\Scripts\activate        
 pip install -r requirements.txt
-```
 
 ## Ejecución de las pruebas
-```bash
+
 pytest tests/test_saucedemo.py -v --html=reports/reporte.html --self-contained-html
-```
+
 
 ## Evidencias
 - `reports/reporte.html`: reporte de resultados de la ejecución.
